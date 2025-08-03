@@ -3,7 +3,8 @@ using Ui;
 using Helpers;
 using Liga_Futbol.src.Shared.Helpers;
 using HexagonalTorneo.Persona.domain;
-using HexagonalTorneo.Player.domain;
+using HexagonalTorneo.Players.domain;
+using Microsoft.VisualBasic;
 
 namespace TorneoManager
 {
@@ -82,20 +83,11 @@ namespace TorneoManager
             do
             {
                 Console.Clear();
-                Menus.MostrarMenuEquipos(); // Nombre correcto del método
+                Menus.MostrarMenuEquipos();
                 op = Validacion.ValiByte();
                 switch (op)
                 {
                     case 1:
-                        var context = DbContextFactory.Create();
-                        // Así lo cambiarías en MenuEquipos()
-                        var personas = new Person("Neymar", "Jr", 32, "1234567890", "CC", "Brasil");
-                        context.Personas.Add(personas);
-                        context.SaveChanges();
-                        foreach (var persona in context.Personas)
-                        {
-                            Console.WriteLine(value: $"Nombre {persona.Name} {persona.LastName}, Edad: {persona.Age}, Document: {persona.DocumentType}.{persona.DocumentNumber}");
-                        }
                         break;
                     case 2:
                         // Lógica para buscar torneo
@@ -126,12 +118,19 @@ namespace TorneoManager
             do
             {
                 Console.Clear();
-                Menus.MostrarMenuJugadores(); // Nombre correcto del método
+                Menus.MostrarMenuJugadores();
                 op = Validacion.ValiByte();
                 switch (op)
                 {
                     case 1:
-                        // Lógica para crear torneo
+                        var context = DbContextFactory.Create();
+                        var personas = new Player("Neymar", "Jr", 32, "1234567890", "CC", "Brasil", 1, "delantero");
+                        context.Personas.Add(personas);
+                        context.SaveChanges();
+                        foreach (var persona in context.Personas)
+                        {
+                            Console.WriteLine($"Nombre {persona.Name} {persona.LastName}, Edad: {persona.Age}, Document: {persona.DocumentType}.{persona.DocumentNumber}");
+                        }
                         break;
                     case 2:
                         // Lógica para buscar torneo

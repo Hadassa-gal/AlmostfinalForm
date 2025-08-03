@@ -4,7 +4,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var context = DbContextFactory.Create();
         SerPrincipal.MenuPrincipal();
     }
 }

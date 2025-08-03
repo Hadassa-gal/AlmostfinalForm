@@ -119,3 +119,4 @@ C:\Users\HP\Documents\C#\AlmostfinalForm\obj\Debug\net9.0\AlmostfinalForm.pdb
 C:\Users\HP\Documents\C#\AlmostfinalForm\obj\Debug\net9.0\AlmostfinalForm.genruntimeconfig.cache
 C:\Users\HP\Documents\C#\AlmostfinalForm\obj\Debug\net9.0\ref\AlmostfinalForm.dll
 C:\Users\HP\Documents\C#\AlmostfinalForm\bin\Debug\net9.0\appsettings.json
+C:\Users\HP\Documents\C#\AlmostfinalForm\obj\Debug\net9.0\AlmostfinalForm.sourcelink.json
