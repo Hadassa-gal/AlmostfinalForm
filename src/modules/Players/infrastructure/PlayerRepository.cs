@@ -24,7 +24,7 @@ namespace AlmostfinalForm.src.modules.Players.interfaces
         public void Crear(Player Jugador)
         {
             var connection = _conexion.ObtenerConexion();
-            string query = "INSERT INTO jugadores (name) VALUES (@name)";
+            string query = "INSERT INTO Jugadores(name) VALUES (@Name)";
             using var cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@name", Jugador.Name);
             cmd.ExecuteNonQuery();
