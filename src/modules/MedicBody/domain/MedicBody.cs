@@ -1,6 +1,6 @@
 using System;
 using HexagonalTorneo.Persona.domain;
-namespace HexagonalTorneo.Player.domain
+namespace HexagonalTorneo.Medic.domain
 {
     public class MedicBody : Person
     {
